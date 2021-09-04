@@ -145,7 +145,8 @@ class Cenario(ElementoJogo):
             self.pintar_jogando(tela)
             self.pintar_winner(tela)
 
-    def pintar_centro(self, tela, texto):
+    @staticmethod
+    def pintar_centro(tela, texto):
         texto_img = font.render(texto, True, amarelo)
         texto_x = (tela.get_width() - texto_img.get_width()) // 2
         texto_y = (tela.get_height() - texto_img.get_height()) // 2
